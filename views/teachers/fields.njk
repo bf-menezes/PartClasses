@@ -1,0 +1,113 @@
+<div class="item">
+    <div>Avatar URL</div>
+    <div>
+        <input 
+            type="url" 
+            name="avatar_url" 
+            placeholder="http://"
+            value='{{ teacher.avatar_url }}'
+        >            
+    </div>            
+</div>
+
+<div class="item">
+    <div>Teacher</div>
+    <div>
+        <input 
+            type="text" 
+            name="full_name" 
+            placeholder="Full name"
+            value='{{ teacher.full_name }}'
+        >
+    </div>            
+</div>
+
+<div class="item">
+    <div>Birth Date</div>
+    <div>
+        <input 
+            type="date" 
+            name="birth_date"
+            value='{{ teacher.birth_date }}'
+        >
+    </div>            
+</div>
+
+<div class="item">
+    <div>Degree</div>
+    <div>
+        <select name="degree">
+            
+            <option 
+                value="H"            
+                {% if teacher.degree == 'H' %}
+                    selected
+                {% endif %} 
+            >High School
+            </option>
+
+            <option 
+                value="G"            
+                {% if teacher.degree == 'G' %}
+                    selected
+                {% endif %} 
+            >Graduate
+            </option>
+            
+            <option 
+                value="M"            
+                {% if teacher.degree == 'M' %}
+                    selected
+                {% endif %} 
+            >Master
+            </option>
+
+            <option 
+                value="D"            
+                {% if teacher.degree == 'D' %}
+                    selected
+                {% endif %} 
+            >Doctorate
+            </option>
+            
+        </select>
+    </div>            
+</div>
+
+<div class="item">
+    <div>Learning type</div>
+    <span>
+        <input 
+            type="radio"
+            name="learning_type"
+            value="C"
+            {% if teacher.learning_type == 'C' %}
+                checked
+            {% endif %}
+        >Classroom
+    </span>
+    <span>
+        <input 
+            type="radio"
+            name="learning_type"
+            value="D"
+            {% if teacher.learning_type == 'D' %}
+                checked
+            {% endif %}
+        >Distance
+    </span>
+</div>
+
+<div class="item">
+    <div>Teaching Areas</div>
+    <div>
+        <input 
+            type="text" 
+            name="teaching_areas" 
+            placeholder="Use comma to separate each area"
+            value='{{ teacher.teaching_areas }}'
+        >
+    </div>            
+</div>
+
+<button type='submit'>Submit</button>

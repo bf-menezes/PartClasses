@@ -1,0 +1,26 @@
+{
+  "teachers": [
+    {
+      "id": 1,
+      "avatar_url": "https://source.unsplash.com/collection/881463/500x500",
+      "full_name": "João Carlos",
+      "birth_date": "2000-05-01",
+      "degree": "H",
+      "learning_type": "D",
+      "teaching_areas": "Chemistry, Biology, History",
+      "created_at": 1588620152279,
+      "birth": null
+    },
+    {
+      "id": 2,
+      "avatar_url": "https://source.unsplash.com/collection/881463/500x500",
+      "full_name": "Mario Andrade",
+      "birth_date": "2002-01-08",
+      "degree": "M",
+      "learning_type": "D",
+      "teaching_areas": "Mathematics, Physics",
+      "created_at": 1588620175547,
+      "birth": null
+    }
+  ]
+}

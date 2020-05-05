@@ -1,0 +1,99 @@
+{% extends 'layout.njk' %}
+
+{% block content %}
+
+<form class="card" method='POST' action='/teachers'>
+    <section 
+        class="avatar"
+        style="background: url(https://source.unsplash.com/collection/881463/500x500) no-repeat center center / cover">
+    </section>
+
+    <section class="details">
+
+        <h3>New Teacher</h3>
+
+        <div class="item">
+            <div>Avatar URL</div>
+            <div>
+                <input 
+                    type="url" 
+                    name="avatar_url" 
+                    placeholder="http://"
+                >            
+            </div>            
+        </div>
+
+        <div class="item">
+            <div>Teacher</div>
+            <div>
+                <input 
+                    type="text" 
+                    name="full_name" 
+                    placeholder="Full name"
+                >
+            </div>            
+        </div>
+
+        <div class="item">
+            <div>Birth Date</div>
+            <div>
+                <input 
+                    type="date" 
+                    name="birth_date" 
+                >
+            </div>            
+        </div>
+
+        <div class="item">
+            <div>Degree</div>
+            <div>
+                <select name="degree">
+                    <option value="H" selected>High School</option>
+                    <option value="G">Graduate</option>
+                    <option value="M">Master</option>
+                    <option value="D">Doctorate</option>
+                </select>
+            </div>            
+        </div>
+
+        <div class="item">
+            <div>Learning type</div>
+            <span>
+                <input 
+                    type="radio"
+                    name="learning_type"
+                    value="C"
+                    {% if teacher.learning_type == 'C' %}
+                        checked
+                    {% endif %}
+                >Classroom
+            </span>
+            <span>
+                <input 
+                    type="radio"
+                    name="learning_type"
+                    value="D"
+                    {% if teacher.learning_type == 'D' %}
+                        checked
+                    {% endif %}
+                >Distance
+            </span>
+        </div>
+
+        <div class="item">
+            <div>Teaching Areas</div>
+            <div>
+                <input 
+                    type="text" 
+                    name="teaching_areas" 
+                    placeholder="Use comma to separate each area"
+                >
+            </div>            
+        </div>
+
+        <button type='submit'>Submit</button>
+    
+    </section>
+</form>
+
+{% endblock content %}

@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #1dc4ae;
+    --secondary-color:  rgb(51, 50, 102);
+    --terciary-color:  rgb(94, 93, 136);
+    --quaternary-color:  rgb(205, 205, 214);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body {
+    background-color: var(--primary-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background-color: white;
+    width: 100%;
+    padding: 32px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.links {
+    font-size: 22px;
+}
+
+/* Selecionando o segundo a */
+.links a + a{
+    margin-left: 32px;
+}
+
+.links a {
+    text-decoration: none;
+    color: var(--terciary-color);
+    position: relative;
+}
+
+.links a.active {
+    font-weight: bold;
+}
+
+.links a:hover{
+    color: var(--primary-color);
+}
+
+.links a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+}
+
+.links a:hover::after {
+    width: 100%;
+    /* transition: propriedade duração timing(forma de percorrer) delay*/
+    transition: width 200ms ease-in-out 0s;
+}
+
+
+/* == CARD == */
+
+.card {
+    background-color: white;
+    width: 800px;
+    min-height: 540px;
+
+    margin: 60px auto;
+
+    display: grid;
+    grid-template-columns: 45% 55%;
+
+    box-shadow: 4px 4px 6px 1px rgba(0, 0, 0, 0.1);
+
+    animation-name: card;
+    animation-duration: 200ms;
+    animation-timing-function: ease;
+}
+
+@keyframes card {
+    from {
+        opacity: 0;
+        transform: translateY(15px)
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* == DETAILS == */
+
+.details {
+    padding: 32px;
+    position: relative;
+}
+
+.details .item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 8px 0;
+}
+
+.details .item:last-child {
+    border: none;
+}
+
+.details h3,
+.details .item div:nth-child(1) {
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--terciary-color);
+    letter-spacing: 0.8px;
+}
+
+.details .item div:nth-child(2) {
+    font-size: 17px;
+    font-weight: bold;
+    color: var(--secondary-color);
+    padding: 4px 0px;
+}
+
+.details h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--secondary-color);
+    font-size: 18px;
+    padding-bottom: 8px;
+}
+
+.details .item span {
+    padding: 6px 16px;
+    background-color: var(--quaternary-color);
+    border-radius: 16px;
+    color: var(--secondary-color);
+    margin-right: 8px;
+    margin-top: 4px;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* FORM */
+
+input {
+    width: 100%;
+    outline: none;
+    color: var(--secondary-color);
+    font-size: 16px;
+}
+
+input[type="radio"] {
+    width: initial;
+    margin-right: 4px;
+}
+
+select,
+input[type='date'],
+input::placeholder {
+    font-size: 14px;
+    font-weight: normal;
+    color: var(--secondary-color);
+    width: 100%;
+    padding: 2px 0px;
+}
+
+button[type='submit'], 
+a.button {
+    padding: 12px 32px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 16px;
+    margin-top: 32px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+a.button {
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
+}
+
+button[type='submit'] {
+    cursor: pointer;
+    position: absolute;
+    box-sizing: initial;
+    padding: 12px 32px;
+    width: 25%;
+    margin-top: 16px;
+}
+
+.details form button:nth-child(1){
+    left: 32px;
+}
+
+.details form button:nth-child(2){
+    right: 32px;
+    background-color: lightcoral;
+}
