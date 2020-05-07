@@ -2,25 +2,23 @@
   "teachers": [
     {
       "id": 1,
-      "avatar_url": "https://source.unsplash.com/collection/881463/500x500",
-      "full_name": "João Carlos",
-      "birth_date": "2000-05-01",
+      "avatar_url": "https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
+      "full_name": "Maria Beatriz",
       "degree": "H",
       "learning_type": "D",
-      "teaching_areas": "Chemistry, Biology, History",
-      "created_at": 1588620152279,
-      "birth": null
+      "teaching_areas": "Chemistry, Biology",
+      "birth_date": "1990-05-01",
+      "created_at": 1588620152279
     },
     {
       "id": 2,
-      "avatar_url": "https://source.unsplash.com/collection/881463/500x500",
-      "full_name": "Mario Andrade",
-      "birth_date": "2002-01-08",
+      "avatar_url": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80",
+      "full_name": "Juliana Cavalcante",
       "degree": "M",
       "learning_type": "D",
       "teaching_areas": "Mathematics, Physics",
-      "created_at": 1588620175547,
-      "birth": null
+      "birth_date": "1992-01-08",
+      "created_at": 1588620175547
     }
   ]
 }
