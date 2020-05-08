@@ -75,7 +75,7 @@ exports.edit = function(req, res) {
     const teacher = {
         ...foundTeacher,
         birth_date: date(foundTeacher.birth_date),
-        id: Number(foundInstructor.id),
+        id: Number(foundTeacher.id),
     }
 
     return res.render('teachers/edit', { teacher })
